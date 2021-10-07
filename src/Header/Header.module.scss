@@ -1,0 +1,35 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	margin-right: 20px;
+}
+
+.title {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #4793ff;
+}
+
+.search {
+	border-radius: 10px;
+	outline: none;
+	width: 294px;
+	height: 37px;
+	padding-left: 20px;
+	color: black;
+	background-color: rgba(71, 147, 255, 0.2);
+	border: none;
+}
