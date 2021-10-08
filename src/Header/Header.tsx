@@ -1,13 +1,17 @@
 import React from 'react'
 import Select from 'react-select'
 import { GlobalSvgSelector } from '../assets/icons/global/GlobalSvgSelector'
+import { Theme } from '../context/ThemeContext'
+import { useTheme } from '../hooks/useTheme'
 import s from './Header.module.scss'
 
 interface Props { }
 
 const API_KEY: string = 'b21371427780d50642723790f91a662d'
+
 export const Header = (props: Props) => {
-	const [theme, setTheme] = React.useState('light')
+
+	const theme = useTheme()
 	const [query, setQuery] = React.useState('')
 	const [weather, setWeather] = React.useState({})
 	const [city, setCity] = React.useState(false)
@@ -21,7 +25,7 @@ export const Header = (props: Props) => {
 	const colorStyles = {
 		control: (styles: any) => ({
 			...styles,
-			backgroundColor: theme === 'dark' ? '#4f4f4f' : 'rgba(71, 147, 255, 0.2)',
+			backgroundColor: theme.theme === Theme.DARK ? '#4f4f4f' : 'rgba(71, 147, 255, 0.2)',
 			width: '194px',
 			height: '37px',
 			border: 'none',
@@ -34,7 +38,7 @@ export const Header = (props: Props) => {
 		}),
 		singleValue: (styles: any) => ({
 			...styles,
-			color: theme === 'dark' ? '#FFF' : '#000',
+			color: theme.theme === Theme.DARK ? '#FFF' : '#000',
 		}),
 	}
 
@@ -49,25 +53,10 @@ export const Header = (props: Props) => {
 				})
 		}
 	}
+
 	const changeTheme = () => {
-		setTheme(theme === 'light' ? 'dark' : 'light')
+		theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
 	}
-
-	React.useEffect(() => {
-		const root = document.querySelector(':root') as HTMLElement
-
-		let components = [
-			'body-background',
-			'components-background',
-			'card-background',
-			'card-shadow',
-			'text-color',
-		]
-
-		components.forEach((component) => {
-			root.style.setProperty(`--${component}-default`, `var(--${component}-${theme})`)
-		})
-	}, [theme])
 
 	return (
 		<header className={s.header}>

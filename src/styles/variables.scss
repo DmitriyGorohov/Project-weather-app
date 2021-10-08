@@ -46,4 +46,9 @@ $card-box-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
 	--text-color-dark: #{$dark-color};
 	--text-color-light: #{$light-color};
 	--text-color-default: var(#{--text-color-light});
+
+	// input
+	--input-background-dark: #{$card-background-dark};
+	--input-background-light: #{$card-background-light};
+	--input-background-default: var(#{--card-background-light});
 }
