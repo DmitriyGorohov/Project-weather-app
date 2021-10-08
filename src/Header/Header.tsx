@@ -39,7 +39,7 @@ export const Header = (props: Props) => {
 				.then((result) => {
 					setWeather(result)
 					setQuery('')
-					console.log(result.main.temp)
+					console.log(result)
 				})
 		}
 	}

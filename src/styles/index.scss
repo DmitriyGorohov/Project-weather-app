@@ -1,10 +1,16 @@
 @import "~normalize.css";
 
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 }
 .container {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 0px auto;
 	padding-top: 20px;
 }

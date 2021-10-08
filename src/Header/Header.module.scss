@@ -3,16 +3,15 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+	margin-bottom: 30px;
 }
 .wrapper {
 	display: flex;
 	align-items: center;
 }
-
 .logo {
 	margin-right: 20px;
 }
-
 .title {
 	font-family: Montserrat;
 	font-style: normal;
@@ -22,7 +21,6 @@
 	text-transform: uppercase;
 	color: #4793ff;
 }
-
 .search {
 	border-radius: 10px;
 	outline: none;
