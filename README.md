@@ -7,3 +7,5 @@ module.scss, react-router-dom, react-select
 ```
 
 ---
+
+sozdal comp THisDay i POPUP

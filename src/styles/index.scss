@@ -8,6 +8,11 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
+	background-color: var(#{--body-background-default});
+	transition: 0.25s ease-in-out;
+}
+.global__container {
+	position: relative;
 }
 .container {
 	max-width: 1200px;

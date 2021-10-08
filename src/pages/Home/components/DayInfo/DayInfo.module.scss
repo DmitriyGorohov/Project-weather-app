@@ -5,15 +5,15 @@
 	padding: 40px;
 	max-width: 750px;
 	width: 100%;
-	background-color: $lite-background;
+	background-color: var(#{--components-background-default});
 	box-shadow: $box-shadow;
 	border-radius: $border-radius;
+	transition: 0.25s ease-in-out;
 }
 .item {
 	position: relative;
 	display: flex;
 	align-items: center;
-	// justify-content: center;
 	margin-bottom: 25px;
 	&:last-of-type {
 		margin-bottom: 0;
@@ -36,12 +36,13 @@
 	}
 	.indicator_value {
 		font-size: 14px;
-		color: $lite-color;
+		color: var(#{--text-color-default});
 	}
 }
 .cloud_img {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 0;
+	border-radius: 20px;
 }
