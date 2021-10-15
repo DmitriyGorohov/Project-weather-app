@@ -1,10 +1,18 @@
-# Тестовое задание на typescript
+### Приложение Погоды на typescript
 
 > На этапе разработки
 
-```
-module.scss, react-router-dom, react-select
-```
+### API
+
+- Method: `GET`
+- URL" `https://openweathermap.org/api`
+
+### Libraries used
+
+- `module.scss`
+- `react-router-dom`
+- `react-js`
+- `react-select`
 
 ---
 

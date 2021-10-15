@@ -7,14 +7,14 @@ import s from './Header.module.scss'
 
 interface Props { }
 
+
 const API_KEY: string = 'b21371427780d50642723790f91a662d'
 
 export const Header = (props: Props) => {
-
 	const theme = useTheme()
-	const [query, setQuery] = React.useState('')
+	const [query, setQuery] = React.useState<string>('')
 	const [weather, setWeather] = React.useState({})
-	const [city, setCity] = React.useState(false)
+	const [city, setCity] = React.useState<boolean>(false)
 
 	const options = [
 		{ value: 'city-1', label: 'Минск' },
@@ -42,7 +42,7 @@ export const Header = (props: Props) => {
 		}),
 	}
 
-	const searchCity = (event: any) => {
+	const searchCity = (event: React.KeyboardEvent<HTMLInputElement>) => {
 		if (event.key === 'Enter') {
 			fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}`)
 				.then((res) => res.json())
@@ -57,6 +57,7 @@ export const Header = (props: Props) => {
 	const changeTheme = () => {
 		theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
 	}
+
 
 	return (
 		<header className={s.header}>

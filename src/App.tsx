@@ -5,7 +5,9 @@ import { Home } from './pages/Home/Home'
 import { MonthStatistics } from './pages/MonthStatistics/MonthStatistics'
 // import { Popup } from './Popup/Popup'
 
+
 function App() {
+
 	return (
 		<div className='global__container'>
 			{/* <Popup /> */}
