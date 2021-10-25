@@ -16,6 +16,9 @@
 - `react-router-dom`
 - `react-js`
 - `react-select`
+- `redux@toolkit`
+- `react-redux`
+- `axios`
 
 ![screen1](screen2.png)
 ![screen1](screen1.png)
